@@ -64,26 +64,24 @@ public class Arquivos {
 
         }
 
-        //Podemos utilizar el método "list()" para recorrer un Array que muestre
+        //TAMBIÉN Podemos utilizar el método "list()" para recorrer un Array que muestre
         //todo el contenido del directorio especificado
-        String[]contenido1 = comprobar1.list();
-        
-        if(contenido1==null){
-            
+        String[] contenido1 = comprobar1.list();
+
+        if (contenido1 == null) {
+
             System.out.println("No hay contenido en este directorio");
-            
-        }else{
-            
-            for(int i=0;i<contenido1.length;i++){
-                
+
+        } else {
+
+            for (int i = 0; i < contenido1.length; i++) {
+
                 System.out.println(contenido1[i]);
-                
+
             }
-            
-            
+
         }
-        
-        
+
         //4
         File subdir = new File("/home/oracle/NetBeansProjects/arquivos/arquivosdir/subdir");
 
@@ -117,8 +115,11 @@ public class Arquivos {
         //crear 2 objetos con 2 rutas?
         File amosar = new File("/home/oracle/NetBeansProjects/arquivos/arquivosdir/");
 
-        System.out.println();
+        String amosarStr[] = amosar.list();
 
+        for (int i = 0; i < amosarStr.length; i++) {
+            System.out.println(amosarStr[i]);
+        }
         //6
         File amosar2 = new File("/home/oracle/NetBeansProjects/arquivos/arquivosdir");
 
@@ -159,7 +160,6 @@ public class Arquivos {
 
         //10
 //        fProducts1.delete();
-
         //existe "deleteOnExit()" para que, una vez salgamos del IDE o VM, se borren
         //11
     }
